@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>English – تالتة إعدادي 2027</title>
+<style>
+:root{--bg1:#e8f0ff;--bg2:#ffe9f3;--card:#fff;--tx:#1b2340;--mut:#5a6385;--p:#4f46e5;--p2:#ec4899;--ok:#16a34a;--no:#dc2626;--sh:0 8px 24px rgba(79,70,229,.18);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg1:#12172e;--bg2:#2a1330;--card:#1e2442;--tx:#eef0ff;--mut:#a9b0d6;--sh:0 8px 24px rgba(0,0,0,.4)}}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;font-family:"Segoe UI",Tahoma,Arial,sans-serif;color:var(--tx);background:linear-gradient(135deg,var(--bg1),var(--bg2));min-height:100vh;overflow-x:hidden}
+.bubbles{position:fixed;inset:0;pointer-events:none;z-index:0}
+.bubbles i{position:absolute;bottom:-60px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#fff9,#818cf855);animation:up linear infinite}
+@keyframes up{to{transform:translateY(-115vh) rotate(360deg)}}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;text-align:center;padding:10px;background:linear-gradient(90deg,var(--p),var(--p2));color:#fff;font-weight:700;letter-spacing:.5px;direction:ltr;box-shadow:var(--sh)}
+header small{display:block;font-weight:400;opacity:.9;font-size:12px}
+main{position:relative;z-index:1;max-width:860px;margin:0 auto;padding:18px}
+h1,h2,h3{margin:.4em 0}
+.card{background:var(--card);border-radius:20px;padding:18px;box-shadow:var(--sh);margin:14px 0;animation:pop .5s both}
+@keyframes pop{from{opacity:0;transform:translateY(18px) scale(.96)}to{opacity:1;transform:none}}
+.big{display:block;width:100%;padding:26px;margin:14px 0;border:0;border-radius:22px;font-size:26px;font-weight:800;color:#fff;cursor:pointer;box-shadow:var(--sh);transition:transform .2s;animation:pop .6s both,float 3s ease-in-out infinite}
+.big:hover{transform:scale(1.04) rotate(-1deg)}
+.b1{background:linear-gradient(135deg,#4f46e5,#7c3aed)}.b2{background:linear-gradient(135deg,#ec4899,#f97316);animation-delay:.1s,.5s}
+@keyframes float{50%{translate:0 -6px}}
+.btn{border:0;border-radius:14px;padding:12px 20px;font-size:17px;font-weight:700;cursor:pointer;background:var(--p);color:#fff;transition:transform .15s}
+.btn:hover{transform:scale(1.06)}.btn.alt{background:var(--p2)}.btn.ghost{background:transparent;color:var(--p);border:2px solid var(--p)}
+.row{display:flex;gap:10px;flex-wrap:wrap}
+.chip{padding:9px 14px;border-radius:999px;border:2px solid var(--p);background:transparent;color:var(--p);font-weight:700;cursor:pointer;font-size:15px}
+.chip.on{background:var(--p);color:#fff}
+.w{display:flex;justify-content:space-between;padding:8px 4px;border-bottom:1px dashed #8884;direction:ltr;animation:pop .4s both}
+.w b{color:var(--p)}.w span{direction:rtl}
+.rule{background:#4f46e51a;border-radius:12px;padding:10px;margin:6px 0;direction:ltr;text-align:left}
+.q{font-size:19px;direction:ltr;text-align:left;margin:10px 0 14px;font-weight:600}
+.opt{display:block;width:100%;direction:ltr;text-align:left;margin:8px 0;padding:13px;border-radius:14px;border:2px solid #8886;background:transparent;color:var(--tx);font-size:17px;cursor:pointer;transition:.2s}
+.opt:hover{border-color:var(--p);transform:translateX(4px)}
+.opt.ok{background:var(--ok);color:#fff;border-color:var(--ok);animation:pulse .5s}.opt.no{background:var(--no);color:#fff;border-color:var(--no);animation:shake .4s}
+@keyframes pulse{50%{transform:scale(1.04)}}@keyframes shake{25%{translate:-8px 0}75%{translate:8px 0}}
+.bar{height:10px;background:#8883;border-radius:9px;overflow:hidden}.bar div{height:100%;background:linear-gradient(90deg,var(--p),var(--p2));transition:width .4s}
+.modal{position:fixed;inset:0;z-index:20;background:#0009;display:flex;align-items:center;justify-content:center;padding:20px}
+.modal .card{max-width:380px;width:100%;text-align:center}
+input{width:100%;padding:14px;border-radius:12px;border:2px solid var(--p);font-size:18px;margin:12px 0;background:var(--card);color:var(--tx);text-align:center}
+.back{margin-bottom:6px}.mut{color:var(--mut)}.score{font-size:54px;animation:pop .6s both}
+.ar{background:#16a34a1a;border-right:5px solid var(--ok);border-radius:12px;padding:12px;margin:8px 0;line-height:1.9;font-size:16px}
+.hello{min-height:70vh;display:flex;flex-direction:column;align-items:center;justify-content:center;direction:ltr;text-align:center}
+.hello h1{font-size:clamp(64px,24vw,160px);margin:0;background:linear-gradient(90deg,var(--p),var(--p2));-webkit-background-clip:text;background-clip:text;color:transparent;animation:zoom 1s both,float 3s ease-in-out 1s infinite}
+.hello h2{font-size:clamp(28px,9vw,56px);animation:pop 1s .6s both}
+@keyframes zoom{from{transform:scale(.2) rotate(-20deg);opacity:0}to{transform:none;opacity:1}}
+.w{cursor:pointer}.w:hover{background:#4f46e51a}
+</style>
+</head>
+<body>
+<div class="bubbles" id="bub"></div>
+<header>Made by Ahmed Sherif Ahmed Mohamed<small>English – Grade 9 (3rd Prep) 2027</small></header>
+<main id="app"></main>
+<script>
+const D={
+en:{name:"English",units:[
+{t:"Unit 1: Technology",v:[["invent","يخترع"],["device","جهاز"],["software","برنامج"],["advanced","متقدم"],["benefit","فائدة"],["depend on","يعتمد على"],["harmful","ضار"],["upgrade","يحدّث"]],
+g:[{n:"Passive Voice",r:"be + past participle (V3)",e:"English is spoken all over the world.",q:[["The telephone ___ by Bell.","was invented","invented","is invent"],["English ___ all over the world.","is spoken","speaks","is speak"],["These cars ___ in Egypt now.","are made","is made","make"],["The homework ___ yesterday.","was done","did","is done"]]},
+{n:"Relative Clauses",r:"who (people) – which (things) – where (places)",e:"The man who lives next door is a doctor.",q:[["The man ___ lives next door is a doctor.","who","which","where"],["This is the app ___ I use daily.","which","who","where"],["Cairo is the city ___ I was born.","where","who","which"]]}]},
+{t:"Unit 2: Environment",v:[["pollution","تلوث"],["protect","يحمي"],["recycle","يعيد التدوير"],["waste","نفايات"],["endangered","مهدد بالانقراض"],["climate","مناخ"],["rubbish","قمامة"],["save","يوفّر"]],
+g:[{n:"First Conditional",r:"If + present simple, will + verb",e:"If we plant trees, the air will be cleaner.",q:[["If we plant trees, the air ___ cleaner.","will be","would be","is"],["If it rains, we ___ at home.","will stay","stayed","would stay"],["She ___ sick if she eats too much.","will get","got","gets"]]},
+{n:"Second Conditional",r:"If + past simple, would + verb",e:"If I were rich, I would travel the world.",q:[["If I ___ rich, I would travel the world.","were","am","will be"],["If he studied hard, he ___ pass.","would","will","did"],["I would help you if I ___ time.","had","have","will have"]]}]},
+{t:"Unit 3: Health",v:[["symptom","عَرَض مرضي"],["exercise","يتمرن"],["balanced diet","غذاء متوازن"],["injury","إصابة"],["recover","يتعافى"],["advice","نصيحة"],["healthy","صحي"],["habit","عادة"]],
+g:[{n:"Modals: should / must / mustn’t",r:"should = advice – must = necessity – mustn’t = prohibition",e:"You mustn’t smoke.",q:[["You ___ smoke. It is dangerous.","mustn’t","should","can"],["You look tired. You ___ rest.","should","mustn’t","can’t"],["Students ___ wear the uniform at school.","must","mustn’t","may not"]]},
+{n:"Reported Speech",r:"Move the verb one step back (am → was, will → would)",e:"He said he was busy.",q:[["He said, “I am busy.” → He said he ___ busy.","was","is","will be"],["She said, “I like pizza.” → She said she ___ pizza.","liked","likes","will like"],["Tom said, “I will come.” → Tom said he ___ come.","would","will","did"]]}]}],
+story:{t:"Story: The Young Inventor",s:"Omar is a young student who loves science. He notices that people waste a lot of water, so he invents a small device that collects rainwater. At first, his classmates laugh at him, but the school uses his invention and saves water. Omar learns that hard work and patience can solve big problems.",
+q:[["Why did Omar invent the device?","To save water","To play games","To win money"],["What did his classmates do at first?","Laughed at him","Helped him","Ignored the school"],["What does Omar learn?","Hard work solves problems","Science is boring","Never try again"]]}},
+hp:{name:"Hello Plus",units:[
+{t:"Unit 1: Jobs and Careers",v:[["career","مهنة / مسار وظيفي"],["salary","مرتب"],["skill","مهارة"],["experience","خبرة"],["employee","موظف"],["apply for","يتقدم لـ"],["interview","مقابلة شخصية"],["responsible","مسؤول"]],
+g:[{n:"Present Perfect",r:"have / has + V3  (for = duration, since = starting point)",e:"I have worked here for two years.",q:[["She ___ here since 2020.","has worked","worked","works"],["I have lived in Cairo ___ ten years.","for","since","from"],["They ___ never visited Aswan.","have","has","did"]]},
+{n:"Question Tags",r:"Positive sentence → negative tag, and the opposite",e:"You are a student, aren’t you?",q:[["You are a student, ___?","aren’t you","are you","don’t you"],["He doesn’t work here, ___?","does he","doesn’t he","is he"],["They can swim, ___?","can’t they","can they","don’t they"]]}]},
+{t:"Unit 2: Travel and Culture",v:[["tourist","سائح"],["ancient","قديم / أثري"],["tradition","تقليد"],["journey","رحلة"],["passport","جواز سفر"],["destination","وجهة"],["local","محلي"],["explore","يستكشف"]],
+g:[{n:"Past Simple vs Past Continuous",r:"Past continuous = action in progress – past simple = interrupting action",e:"I was walking when it started to rain.",q:[["I ___ TV when the phone rang.","was watching","watched","watch"],["While she was cooking, he ___ the door.","opened","was opening","opens"],["We ___ to Luxor last summer.","travelled","were travelling","travel"]]},
+{n:"Comparatives & Superlatives",r:"-er / more … than  –  the -est / the most …",e:"Egypt is the most famous country for pyramids.",q:[["The Nile is ___ than any other river here.","longer","long","longest"],["This is the ___ film I have ever seen.","best","better","good"],["Travelling by plane is ___ than by bus.","more expensive","most expensive","expensiver"]]}]},
+{t:"Unit 3: Friendship and Community",v:[["friendship","صداقة"],["volunteer","متطوع"],["community","مجتمع"],["support","يدعم"],["trust","ثقة"],["share","يشارك"],["respect","احترام"],["generous","كريم"]],
+g:[{n:"Used to",r:"used to + verb = a past habit that stopped",e:"I used to play football every day.",q:[["I ___ play football every day when I was young.","used to","use to","was used"],["She ___ live in Alexandria.","used to","is used to","use to"],["Did you ___ walk to school?","use to","used to","using to"]]},
+{n:"Wish",r:"wish + past simple (present wish) / wish + past perfect (past regret)",e:"I wish I had more free time.",q:[["I wish I ___ more free time.","had","have","will have"],["He wishes he ___ the exam last year.","had studied","studied","studies"],["I wish it ___ sunny today.","were","is","will be"]]}]}],
+story:{t:"Story: The Helping Hand",s:"Salma and her friends notice that an old neighbour is lonely. They decide to volunteer: they visit her, share meals and help with shopping. Soon more people in the community join them. Salma understands that small acts of kindness make everyone stronger.",
+q:[["Why did Salma and her friends volunteer?","A neighbour was lonely","They wanted money","They were bored"],["What did the community do later?","Joined them","Moved away","Complained"],["What does Salma understand?","Kindness makes people stronger","Money is everything","Work alone"]]}}};
+
+const AR={
+"Passive Voice":["بنستخدمه لما الفاعل مش مهم أو مجهول، والتركيز على الشيء اللي اتعمل فيه الفعل. الصيغة: be (is/am/are/was/were) + الفعل في التصريف التالت V3. المضارع: is/are + V3، والماضي: was/were + V3.",[["The window was broken yesterday.","الشباك اتكسر امبارح."],["Rice is grown in Egypt.","الأرز بيتزرع في مصر."]]],
+"Relative Clauses":["بنستخدمها عشان نربط جملتين ونوصف اسم. who للأشخاص، which للأشياء، where للأماكن.",[["The girl who won is my sister.","البنت اللي كسبت هي أختي."],["The book which I read was great.","الكتاب اللي قريته كان رائع."]]],
+"First Conditional":["لأمر ممكن يحصل في المستقبل. الشرط: If + مضارع بسيط، والنتيجة: will + فعل.",[["If you study, you will pass.","لو ذاكرت هتنجح."],["If I am free, I will call you.","لو كنت فاضي هكلمك."]]],
+"Second Conditional":["لأمر خيالي أو صعب يحصل دلوقتي. If + ماضي بسيط، والنتيجة: would + فعل. ومع be بنستخدم were مع كل الضمائر.",[["If I had wings, I would fly.","لو عندي أجنحة كنت طِرت."],["If she were here, she would help.","لو كانت هنا كانت ساعدتنا."]]],
+"Modals: should / must / mustn’t":["should للنصيحة، must للضرورة والإلزام، mustn’t للمنع (ممنوع). وبعدهم الفعل بدون to.",[["You should drink water.","المفروض تشرب مية."],["You mustn’t cross the red light.","ممنوع تعدّي الإشارة الحمرا."]]],
+"Reported Speech":["بننقل كلام حد. بنرجّع الفعل خطوة للخلف: am/is ← was، will ← would، المضارع ← الماضي. وبنغيّر الضمائر.",[["He said, “I play.” → He said he played.","قال إنه بيلعب."],["She said, “I can swim.” → She said she could swim.","قالت إنها بتعرف تسبح."]]],
+"Present Perfect":["لحاجة بدأت في الماضي ولسه ليها علاقة بالحاضر. have/has + V3. for لمدة زمنية (for 5 years)، since لنقطة البداية (since 2020).",[["I have known him for 5 years.","أعرفه من 5 سنين."],["She has been ill since Monday.","هي تعبانة من يوم الإتنين."]]],
+"Question Tags":["سؤال قصير في آخر الجملة للتأكيد. لو الجملة مثبتة يبقى التاج منفي، ولو منفية يبقى التاج مثبت، بنفس الفعل المساعد.",[["It is cold, isn’t it?","الجو برد، مش كده؟"],["You don’t like tea, do you?","إنت مش بتحب الشاي، صح؟"]]],
+"Past Simple vs Past Continuous":["Past continuous (was/were + ing) لحدث كان شغال وقت معين. Past simple لحدث قصير قطع الحدث الطويل. بنربطهم بـ when و while.",[["I was reading when he came.","كنت بقرا لما جه."],["While we were eating, the light went out.","وإحنا بناكل النور قطع."]]],
+"Comparatives & Superlatives":["للمقارنة بين اتنين: صفة قصيرة + er + than، وصفة طويلة more + صفة + than. وللأفضل بين أكتر من اتنين: the + est أو the most.",[["Ali is taller than Omar.","علي أطول من عمر."],["This is the most interesting book.","ده أمتع كتاب."]]],
+"Used to":["لعادة كانت في الماضي ومبقتش دلوقتي. used to + فعل. وفي النفي والسؤال بنستخدم use to بعد did.",[["We used to live in Giza.","كنا بنسكن في الجيزة."],["I didn’t use to like fish.","ماكنتش بحب السمك."]]],
+"Wish":["للتمني. wish + ماضي بسيط للتمني في الحاضر، وwish + had + V3 للندم على حاجة حصلت في الماضي.",[["I wish I were taller.","نفسي أكون أطول."],["I wish I had studied more.","يا ريتني كنت ذاكرت أكتر."]]]};
+const SAR={en:"عمر طالب بيحب العلوم. لاحظ إن الناس بتبدد مية كتير، فاخترع جهاز صغير بيجمع مية المطر. في الأول زمايله ضحكوا عليه، لكن المدرسة استخدمت اختراعه ووفّرت مية. عمر اتعلم إن الشغل الجاد والصبر بيحلوا المشاكل الكبيرة.",hp:"سلمى وأصحابها لاحظوا إن جارة كبيرة في السن وحيدة. قرروا يتطوعوا: يزوروها ويشاركوها الأكل ويساعدوها في الشراء. بعد شوية ناس كتير في المجتمع انضموا لهم. سلمى فهمت إن اللطف والأفعال الصغيرة بتقوّي الكل."};
+const arx=n=>{const a=AR[n];return a?`<div class="ar"><b>📝 الشرح بالعربي:</b><br>${a[0]}</div><b>أمثلة:</b>${a[1].map(e=>`<div class="rule">💡 ${e[0]}<span class="mut" style="display:block;direction:rtl;text-align:right">${e[1]}</span></div>`).join("")}`:""};
+const say=t=>{try{speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang="en-US";u.rate=.9;speechSynthesis.speak(u)}catch(e){}};
+function splash(){app.innerHTML=`<div class="hello"><h1>Hello!</h1><h2>${esc(user)} 👋</h2></div>`;say("Hello");setTimeout(home,3000)}
+const $=s=>document.querySelector(s),app=$("#app");
+const sh=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+let user="";try{user=localStorage.getItem("nm")||""}catch(e){}
+const b=$("#bub");for(let i=0;i<14;i++){const e=document.createElement("i"),s=20+Math.random()*50;e.style.cssText=`width:${s}px;height:${s}px;left:${Math.random()*100}%;animation-duration:${9+Math.random()*12}s;animation-delay:${-Math.random()*15}s`;b.appendChild(e)}
+
+function ask(){
+ app.innerHTML=`<div class="modal"><div class="card"><h2>👋 Welcome!</h2><p>اكتب اسمك عشان نبدأ</p><input id="nm" placeholder="Your name" maxlength="30"><button class="btn" id="go">يلا نبدأ 🚀</button></div></div>`;
+ $("#go").onclick=()=>{const v=$("#nm").value.trim();if(!v)return $("#nm").focus();user=v;try{localStorage.setItem("nm",v)}catch(e){}splash()}}
+function home(){
+ app.innerHTML=`<div class="card"><h2>أهلاً يا ${esc(user)} 👋</h2><p class="mut">اختار المنهج اللي عايز تذاكره:</p></div>
+ <button class="big b1" data-k="en">📘 English</button><button class="big b2" data-k="hp">📗 Hello Plus</button>
+ <button class="btn ghost" id="chg">تغيير الاسم</button>`;
+ document.querySelectorAll(".big").forEach(x=>x.onclick=()=>sec(x.dataset.k));$("#chg").onclick=ask}
+const esc=s=>s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const back=f=>`<button class="btn ghost back" id="bk">↩ رجوع</button>`;
+function sec(k){
+ app.innerHTML=`${back()}<div class="card"><h2>${D[k].name}</h2></div>
+ <button class="big b1" id="ex">📖 شرح</button><button class="big b2" id="pl">🎮 العب</button>`;
+ $("#bk").onclick=home;$("#ex").onclick=()=>explain(k,0);$("#pl").onclick=()=>pick(k)}
+function explain(k,i){
+ const d=D[k],tabs=d.units.map((u,j)=>`<button class="chip ${j===i?"on":""}" data-i="${j}">Unit ${j+1}</button>`).join("")+`<button class="chip ${i==="s"?"on":""}" data-i="s">Story</button>`;
+ let body;
+ if(i==="s")body=`<div class="card"><h3 dir="ltr">${d.story.t}</h3><p dir="ltr" style="text-align:left;line-height:1.8">${d.story.s}</p><div class="ar"><b>📝 بالعربي:</b><br>${SAR[k]}</div></div>`;
+ else{const u=d.units[i];body=`<div class="card"><h3 dir="ltr">${u.t}</h3><h3>🔑 أهم الكلمات</h3><p class="mut">اضغط على الكلمة لتسمع النطق 🔊</p>${u.v.map((w,n)=>`<div class="w" onclick="say('${w[0]}')" style="animation-delay:${n*.06}s"><b>🔊 ${w[0]}</b><span>${w[1]}</span></div>`).join("")}</div>
+ <div class="card"><h3>✏️ Grammar</h3>${u.g.map(g=>`<h3 dir="ltr" style="text-align:left">${g.n}</h3><div class="rule">📐 ${g.r}<br>✅ <i>${g.e}</i></div>${arx(g.n)}<hr style="border:0;border-top:2px dashed #8884;margin:16px 0">`).join("")}</div>`}
+ app.innerHTML=`${back()}<div class="card"><h2>شرح ${d.name}</h2><div class="row">${tabs}</div></div>${body}<button class="btn alt" id="pl">🎮 العب على ده</button>`;
+ $("#bk").onclick=()=>sec(k);$("#pl").onclick=()=>pick(k);
+ document.querySelectorAll(".chip").forEach(c=>c.onclick=()=>explain(k,c.dataset.i==="s"?"s":+c.dataset.i))}
+function pick(k){
+ const d=D[k];
+ app.innerHTML=`${back()}<div class="card"><h2>🎮 العب – ${d.name}</h2><p class="mut">اختار هتتسل على إيه (الأسئلة بتتغير كل مرة):</p>
+ <div class="row">${d.units.map((u,j)=>`<button class="btn" data-s="${j}">Unit ${j+1}</button>`).join("")}<button class="btn alt" data-s="s">Story</button><button class="btn" style="background:#f59e0b" data-s="all">الكل 🔥</button></div></div>`;
+ $("#bk").onclick=()=>sec(k);document.querySelectorAll("[data-s]").forEach(x=>x.onclick=()=>quiz(k,x.dataset.s))}
+function build(k,s){
+ const d=D[k],us=s==="all"?d.units:s==="s"?[]:[d.units[+s]],allV=d.units.flatMap(u=>u.v);let P=[];
+ us.forEach(u=>{u.v.forEach(w=>{const r=Math.random()<.5;
+  const wr=sh(allV.filter(x=>x!==w)).slice(0,3);
+  P.push(r?{q:`What is the meaning of “${w[0]}”?`,a:w[1],o:wr.map(x=>x[1])}:{q:`Which word means “${w[1]}” ?`,a:w[0],o:wr.map(x=>x[0])})});
+  u.g.forEach(g=>g.q.forEach(x=>P.push({q:x[0],a:x[1],o:x.slice(2)})))});
+ if(s==="s"||s==="all")d.story.q.forEach(x=>P.push({q:x[0],a:x[1],o:x.slice(2)}));
+ if(s==="s")P=P.concat(storyExtra(d));
+ return sh(P).slice(0,10)}
+function storyExtra(d){return [{q:"Read the summary: “"+d.story.s.split(". ")[0]+".” Is it about a character?",a:"Yes",o:["No","Not sure"]}]}
+function quiz(k,s){
+ const Q=build(k,s);let i=0,sc=0;
+ const show=()=>{
+  if(i>=Q.length){const p=Math.round(sc/Q.length*100);
+   app.innerHTML=`<div class="card" style="text-align:center"><div class="score">${p>=80?"🏆":p>=50?"👏":"💪"} ${sc}/${Q.length}</div><h2>${p>=80?"ممتاز يا ":p>=50?"كويس يا ":"حاول تاني يا "}${esc(user)}!</h2><div class="row" style="justify-content:center"><button class="btn" id="re">🔄 أسئلة جديدة</button><button class="btn ghost" id="ch">اختيار تاني</button></div></div>`;
+   $("#re").onclick=()=>quiz(k,s);$("#ch").onclick=()=>pick(k);return}
+  const c=Q[i],o=sh([c.a,...c.o]);
+  app.innerHTML=`${back()}<div class="card"><div class="bar"><div style="width:${i/Q.length*100}%"></div></div><p class="mut">Question ${i+1} / ${Q.length} · Score ${sc}</p><div class="q">${c.q}</div>${o.map(x=>`<button class="opt">${x}</button>`).join("")}</div>`;
+  $("#bk").onclick=()=>pick(k);
+  document.querySelectorAll(".opt").forEach(x=>x.onclick=()=>{
+   document.querySelectorAll(".opt").forEach(y=>{y.onclick=null;if(y.textContent===c.a)y.classList.add("ok")});
+   if(x.textContent===c.a)sc++;else x.classList.add("no");
+   i++;setTimeout(show,1000)})};
+ show()}
+user?splash():ask();
+</script>
+</body>
+</html>
